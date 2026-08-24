@@ -1,0 +1,82 @@
+[
+  {
+    "key": "cherries",
+    "file": "/photos/cherries.jpg",
+    "subject": "ripe coffee cherries on the branch",
+    "title": "Kenyan farmers sorting coffee cherries.jpg",
+    "author": "Kamweti wa Mutu",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kenyan_farmers_sorting_coffee_cherries.jpg"
+  },
+  {
+    "key": "farm",
+    "file": "/photos/farm.jpg",
+    "subject": "coffee farm / plantation rows",
+    "title": "Coffee plantation near Kawaida Falls, Cianda, Kiambu County 01.jpg",
+    "author": "Lebu Ayiga",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coffee_plantation_near_Kawaida_Falls,_Cianda,_Kiambu_County_01.jpg"
+  },
+  {
+    "key": "highlands",
+    "file": "/photos/highlands.jpg",
+    "subject": "Kenyan highland landscape",
+    "title": "Mount Kenya skyline.jpg",
+    "author": "John Spooner",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mount_Kenya_skyline.jpg"
+  },
+  {
+    "key": "drying",
+    "file": "/photos/drying.jpg",
+    "subject": "drying beds / patio",
+    "title": "Women drying coffee.jpg",
+    "author": "PHILIP ASEDRI DRADRIO",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Women_drying_coffee.jpg"
+  },
+  {
+    "key": "parchment",
+    "file": "/photos/parchment.jpg",
+    "subject": "parchment / dry milling",
+    "title": "Colombian Parchment Coffee.jpg",
+    "author": "Felipe Quijano",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colombian_Parchment_Coffee.jpg"
+  },
+  {
+    "key": "greenbeans",
+    "file": "/photos/greenbeans.jpg",
+    "subject": "unroasted green beans",
+    "title": "Coffee beans unroasted.jpg",
+    "author": "Isai Symens",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coffee_beans_unroasted.jpg"
+  },
+  {
+    "key": "farmers",
+    "file": "/photos/farmers.jpg",
+    "subject": "farmers / cooperative",
+    "title": "Small Scale Coffee Farming in Kenya.jpg",
+    "author": "Shirleen.Kay",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Small_Scale_Coffee_Farming_in_Kenya.jpg"
+  },
+  {
+    "key": "port",
+    "file": "/photos/port.jpg",
+    "subject": "port / container terminal",
+    "title": "Container ship exiting Mombasa port, Kenya 01.jpg",
+    "author": "Ian Kiptoo",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Container_ship_exiting_Mombasa_port,_Kenya_01.jpg"
+  }
+]
