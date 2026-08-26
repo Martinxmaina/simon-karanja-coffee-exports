@@ -40,8 +40,8 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 const SITE_TITLE: Record<Locale, string> = {
-  en: "Simon Karanja Coffee Exports — Kenyan green coffee, wholesale",
-  ru: "Simon Karanja Coffee Exports — кенийский зелёный кофе оптом",
+  en: "Simon & Sons Coffee — Kenyan green coffee, wholesale",
+  ru: "Simon & Sons Coffee — кенийский зелёный кофе оптом",
 };
 
 export async function generateMetadata(): Promise<Metadata> {

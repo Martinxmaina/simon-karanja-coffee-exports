@@ -62,7 +62,7 @@ type Copy = {
 const en: Copy = {
   metaTitle: "Contact and price requests",
   metaDescription:
-    "Reach Simon Karanja Coffee Exports direct: phone and WhatsApp in Kenya and Russia, e-mail, and a price request form for AA, AB and PB green coffee — FOB Mombasa through to DAP your warehouse.",
+    "Reach Simon & Sons Coffee direct: phone and WhatsApp in Kenya and Russia, e-mail, and a price request form for AA, AB and PB green coffee — FOB Mombasa through to DAP your warehouse.",
 
   eyebrow: "Contact · Price requests",
   h1: "Request a price list and a sample",
@@ -135,7 +135,7 @@ const en: Copy = {
 const ru: Copy = {
   metaTitle: "Контакты",
   metaDescription:
-    "Свяжитесь с Simon Karanja Coffee Exports: телефоны, WhatsApp, e-mail и форма запроса прайса на кенийский зелёный кофе.",
+    "Свяжитесь с Simon & Sons Coffee: телефоны, WhatsApp, e-mail и форма запроса прайса на кенийский зелёный кофе.",
 
   eyebrow: "Контакты · Запрос прайса",
   h1: "Запросите прайс и образец",

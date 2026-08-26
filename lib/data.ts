@@ -4,13 +4,13 @@
 // are a formatting concern (see lib/i18n.ts num/range) rather than duplicated data.
 
 export const company = {
-  name: "Simon Karanja Coffee Exports",
+  name: "Simon & Sons Coffee",
   /** Header lockup only — the full name is too wide beside nine nav items. */
-  shortName: "Simon Karanja",
-  legal: "Simon Karanja Coffee Exports Ltd.",
-  phoneKe: "+254 700 000 000",
-  phoneKeHref: "tel:+254700000000",
-  phoneRu: "+7 929 640 11 62",
+  shortName: "Simon & Sons",
+  legal: "Simon & Sons Coffee Ltd.",
+  phoneKe: "+254 705 951 082",
+  phoneKeHref: "tel:+254705951082",
+  phoneRu: "+7 929 640-11-62",
   phoneRuHref: "tel:+79296401162",
   whatsapp: "https://wa.me/79296401162",
   email: "info@kenyacoffee.co.ke",

@@ -58,14 +58,24 @@ export default function Header({ lang }: { lang: Locale }) {
             href={hrefFor(lang, "")}
             aria-label={`${company.name} — ${t.nav.home}`}
           >
+            {/* Three cherries on one branch — one large, two smaller — carrying
+                the "& Sons" of the name. Sizes and positions are deliberately
+                asymmetric: an even trio reads as a cartoon mouse.
+                The --ground stroke separates overlapping fruit and tracks the
+                header background (.top uses --ground) in both themes. */}
             <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
               <circle cx="20" cy="20" r="18.5" stroke="var(--forest)" strokeWidth="1.5" />
-              <path d="M8 26 15.5 13.5 20.5 22" stroke="var(--forest)" strokeWidth="2" strokeLinejoin="round" fill="none" />
-              <path d="M18 26 24 15.5 32 26Z" stroke="var(--forest)" strokeWidth="2" strokeLinejoin="round" fill="none" />
-              <path d="M13 17.5h4.5" stroke="var(--forest)" strokeWidth="1.5" />
-              <circle cx="14" cy="30" r="2.6" fill="var(--cherry)" />
-              <circle cx="20.5" cy="31.5" r="2.2" fill="var(--cherry)" />
-              <path d="M26 30.5c.6 1.6 2.4 2.6 4.4 2.2-.4-2-2-3.2-4.4-2.2Z" fill="var(--brass)" />
+              <path
+                d="M19.2 20.5C18.4 15 18.2 11.6 18.6 9.8"
+                stroke="var(--forest)"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                fill="none"
+              />
+              <path d="M19 14c2.5.2 4.5-1.5 4.9-4-2.7-.4-4.7 1.2-4.9 4Z" fill="var(--brass)" />
+              <circle cx="11.8" cy="20.2" r="3.8" fill="var(--cherry)" stroke="var(--ground)" strokeWidth="1.1" />
+              <circle cx="27.2" cy="22.4" r="4.5" fill="var(--cherry)" stroke="var(--ground)" strokeWidth="1.1" />
+              <circle cx="19.2" cy="24.2" r="6.1" fill="var(--cherry)" stroke="var(--ground)" strokeWidth="1.1" />
             </svg>
             <span className="brand-txt">
               <b>{company.shortName}</b>

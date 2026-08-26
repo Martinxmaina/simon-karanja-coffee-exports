@@ -192,7 +192,7 @@ const en: Copy = {
   docs: [
     {
       doc: "Commercial invoice and packing list",
-      issuer: "Simon Karanja Coffee Exports Ltd.",
+      issuer: "Simon & Sons Coffee Ltd.",
       when: "Day of sailing",
     },
     { doc: "Bill of lading", issuer: "Carrier / forwarder", when: `${range(3, 5, "en")} days after sailing` },
@@ -334,7 +334,7 @@ const ru: Copy = {
   docs: [
     {
       doc: "Коммерческий инвойс и упаковочный лист",
-      issuer: "Simon Karanja Coffee Exports Ltd.",
+      issuer: "Simon & Sons Coffee Ltd.",
       when: "в день выхода судна",
     },
     { doc: "Коносамент", issuer: "линия или экспедитор", when: `${range(3, 5, "ru")} дней после выхода судна` },

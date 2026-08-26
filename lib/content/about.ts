@@ -28,7 +28,7 @@ type Copy = {
 const en: Copy = {
   metaTitle: "About us",
   metaDescription:
-    "Simon Karanja Coffee Exports Ltd. buys green coffee direct from Kenyan cooperatives and small estates, cups every lot before it ships, and exports FOB Mombasa, CFR or CIF to roasters and importers.",
+    "Simon & Sons Coffee Ltd. buys green coffee direct from Kenyan cooperatives and small estates, cups every lot before it ships, and exports FOB Mombasa, CFR or CIF to roasters and importers.",
   eyebrow: "About us",
   h1: "Between a Kenyan wet mill and your roastery",
   heroLead: `${company.legal} works at the top of the chain: we buy the fresh crop from cooperatives and small estates, oversee processing and cupping, clear the export paperwork and follow the container through to your warehouse.`,
@@ -86,7 +86,7 @@ const en: Copy = {
 const ru: Copy = {
   metaTitle: "О компании",
   metaDescription:
-    "Simon Karanja Coffee Exports — прямые поставки зелёного кофе от кооперативов Кении обжарщикам и импортёрам России.",
+    "Simon & Sons Coffee — прямые поставки зелёного кофе от кооперативов Кении обжарщикам и импортёрам России.",
   eyebrow: "О компании",
   h1: "Мост между фермой в Кении и обжарочной в России",
   heroLead: `${company.legal} работает у истока цепочки поставки: закупает свежий урожай у кооперативов и небольших эстейтов, контролирует обработку и каппинг, оформляет экспорт и сопровождает груз до вашего склада.`,
