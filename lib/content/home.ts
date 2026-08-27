@@ -147,7 +147,7 @@ const en: Copy = {
     quality: "Cupping to the SCA protocol, moisture and water activity, defect counts before shipment.",
     logistics: "Volume tiers, Incoterms, sea and air routes, and the full document set.",
     faq: "Payment terms, minimum volumes, lead times and samples — answered plainly.",
-    news: "Crop notes, Nairobi auction prices and what freight is doing this month.",
+    news: "Crop notes, the Nairobi auction and what freight is doing this month.",
     contact: "Phone, WhatsApp and the price-list request form. We reply within one working day.",
   },
 };
@@ -234,7 +234,7 @@ const ru: Copy = {
     quality: "Каппинг по протоколу SCA, влажность и водная активность, контроль дефектов перед отгрузкой.",
     logistics: "Объёмы поставки, условия Incoterms, маршрут доставки и пакет документов.",
     faq: "Оплата, минимальный объём, сроки и пробы — короткие ответы по существу.",
-    news: "Ход урожая, цены аукциона в Найроби и ситуация с фрахтом.",
+    news: "Ход урожая, новости аукциона в Найроби и ситуация с фрахтом.",
     contact: "Телефоны, WhatsApp и форма запроса прайса. Отвечаем в течение рабочего дня.",
   },
 };

@@ -152,8 +152,9 @@ const en: Copy = {
       risk: "On arrival at your warehouse",
     },
   ],
-  termsFootLabel: "Payment and validity.",
-  termsFootText: `Offers are quoted in USD per lb FOB Mombasa and hold for ${num(5, "en")} working days; freight and insurance are shown as separate lines so you can see how CIF is built. Standard terms are ${num(30, "en")} % on lot confirmation and ${num(70, "en")} % against scanned documents, or an irrevocable L/C at sight from container volume up.`,
+  termsFootLabel: "Payment and offers.",
+  termsFootText:
+    "Freight and insurance are shown as separate lines in every offer, so you can see how CIF is built. Payment is by bank transfer against the contract, or an irrevocable L/C at sight from container volume up — the terms for your lot are confirmed in the offer itself.",
 
   routeEyebrow: "Legs and transit",
   routeTitle: "Nairobi to your warehouse",
@@ -294,8 +295,9 @@ const ru: Copy = {
       risk: "по прибытии на ваш склад",
     },
   ],
-  termsFootLabel: "Оплата и срок действия цены.",
-  termsFootText: `Цены указываются в долларах США за фунт на базисе FOB Момбаса и действительны ${num(5, "ru")} рабочих дней; фрахт и страхование показываем отдельными строками, чтобы было видно, из чего складывается CIF. Стандартная схема — ${num(30, "ru")} % при подтверждении лота и ${num(70, "ru")} % против скан-копий документов, от контейнера — безотзывный аккредитив по предъявлении.`,
+  termsFootLabel: "Оплата и оферта.",
+  termsFootText:
+    "Фрахт и страхование показываем в оферте отдельными строками, чтобы было видно, из чего складывается CIF. Оплата — банковским переводом по контракту, от контейнера — безотзывный аккредитив по предъявлении; условия по вашему лоту фиксируются в предложении.",
 
   routeEyebrow: "Плечи доставки",
   routeTitle: "От Найроби до вашего склада",

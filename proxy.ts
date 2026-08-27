@@ -1,17 +1,32 @@
-// Next 16 renamed Middleware to Proxy. Its only job here is sending bare paths
-// (/, /products) to a locale-prefixed one, picking the visitor's language from
-// Accept-Language when we have no stored preference.
+// Next 16 renamed Middleware to Proxy (and the exported function with it).
+// Its only job here is sending bare paths (/, /products) to a locale-prefixed
+// one, choosing the language from where the visitor actually is.
 import { NextResponse, type NextRequest } from "next/server";
-import { defaultLocale, isLocale, locales } from "@/lib/i18n";
+import { defaultLocale, isLocale, locales, type Locale } from "@/lib/i18n";
 
 const COOKIE = "locale";
 
-function preferredLocale(request: NextRequest): string {
-  const stored = request.cookies.get(COOKIE)?.value;
-  if (stored && isLocale(stored)) return stored;
+// Vercel sets this on every request. `geolocation()` from @vercel/functions
+// reads the same header, so we skip the dependency for a single lookup.
+// Absent locally and on other hosts — we fall back to Accept-Language there.
+const COUNTRY_HEADER = "x-vercel-ip-country";
 
-  // "ru-RU,ru;q=0.9,en;q=0.8" -> ordered tags. Intl-free: two locales does not
-  // justify pulling in Negotiator + intl-localematcher.
+// Countries served in Russian. Russia is the core market; the rest of the CIS
+// is included because Russian is the working trade language there.
+const RUSSIAN_SPEAKING = new Set([
+  "RU", "BY", "KZ", "KG", "TJ", "UZ", "AM", "MD",
+]);
+
+function fromCountry(request: NextRequest): Locale | null {
+  const country = request.headers.get(COUNTRY_HEADER)?.toUpperCase();
+  if (!country) return null;
+  // Kenya and everywhere else fall through to English, the default.
+  return RUSSIAN_SPEAKING.has(country) ? "ru" : "en";
+}
+
+function fromAcceptLanguage(request: NextRequest): Locale | null {
+  // "ru-RU,ru;q=0.9,en;q=0.8" -> ordered tags. Two locales does not justify
+  // pulling in Negotiator + intl-localematcher.
   const header = request.headers.get("accept-language") ?? "";
   const tags = header
     .split(",")
@@ -26,7 +41,16 @@ function preferredLocale(request: NextRequest): string {
     const base = tag.split("-")[0];
     if (isLocale(base)) return base;
   }
-  return defaultLocale;
+  return null;
+}
+
+function preferredLocale(request: NextRequest): Locale {
+  // An explicit choice via the language switcher outranks any detection —
+  // a Kenyan visitor who picks Russian must stay in Russian.
+  const stored = request.cookies.get(COOKIE)?.value;
+  if (stored && isLocale(stored)) return stored;
+
+  return fromCountry(request) ?? fromAcceptLanguage(request) ?? defaultLocale;
 }
 
 export function proxy(request: NextRequest) {
@@ -42,8 +66,8 @@ export function proxy(request: NextRequest) {
   url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
 
   const res = NextResponse.redirect(url);
-  // Remember the choice so a visitor who switches language is not bounced back
-  // to their browser default on the next bare-path visit.
+  // Remember it so a visitor who switches language is not bounced back to the
+  // detected one on their next bare-path visit.
   res.cookies.set(COOKIE, locale, { path: "/", maxAge: 60 * 60 * 24 * 365, sameSite: "lax" });
   return res;
 }

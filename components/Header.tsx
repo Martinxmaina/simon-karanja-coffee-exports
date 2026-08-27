@@ -58,24 +58,26 @@ export default function Header({ lang }: { lang: Locale }) {
             href={hrefFor(lang, "")}
             aria-label={`${company.name} — ${t.nav.home}`}
           >
-            {/* Three cherries on one branch — one large, two smaller — carrying
-                the "& Sons" of the name. Sizes and positions are deliberately
-                asymmetric: an even trio reads as a cartoon mouse.
-                The --ground stroke separates overlapping fruit and tracks the
-                header background (.top uses --ground) in both themes. */}
+            {/* S·S monogram — Simon & Sons — with a coffee cherry standing in
+                for the ampersand, which keeps the origin cue in an otherwise
+                typographic mark. Two separated letterforms beat an overlapping
+                pair (reads as a drop shadow) and beat a 180°-rotated one, since
+                an S is rotationally symmetric and maps onto itself. */}
             <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <circle cx="20" cy="20" r="18.5" stroke="var(--forest)" strokeWidth="1.5" />
+              <circle cx="20" cy="20" r="18.5" stroke="var(--forest)" strokeWidth="1.6" />
               <path
-                d="M19.2 20.5C18.4 15 18.2 11.6 18.6 9.8"
+                d="M16.1 15.4C16.1 12.2 13.6 11 11.6 11C9.1 11 7.1 12.5 7.1 15C7.1 17.5 9.6 18.6 11.6 19.3C13.6 20 16.1 21.2 16.1 24.1C16.1 26.9 13.6 29 11.6 29C9.1 29 7.1 27.6 7.1 25.1"
                 stroke="var(--forest)"
-                strokeWidth="1.6"
+                strokeWidth="3"
                 strokeLinecap="round"
-                fill="none"
               />
-              <path d="M19 14c2.5.2 4.5-1.5 4.9-4-2.7-.4-4.7 1.2-4.9 4Z" fill="var(--brass)" />
-              <circle cx="11.8" cy="20.2" r="3.8" fill="var(--cherry)" stroke="var(--ground)" strokeWidth="1.1" />
-              <circle cx="27.2" cy="22.4" r="4.5" fill="var(--cherry)" stroke="var(--ground)" strokeWidth="1.1" />
-              <circle cx="19.2" cy="24.2" r="6.1" fill="var(--cherry)" stroke="var(--ground)" strokeWidth="1.1" />
+              <path
+                d="M32.9 15.4C32.9 12.2 30.4 11 28.4 11C25.9 11 23.9 12.5 23.9 15C23.9 17.5 26.4 18.6 28.4 19.3C30.4 20 32.9 21.2 32.9 24.1C32.9 26.9 30.4 29 28.4 29C25.9 29 23.9 27.6 23.9 25.1"
+                stroke="var(--forest)"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+              <circle cx="20" cy="20" r="2.4" fill="var(--cherry)" />
             </svg>
             <span className="brand-txt">
               <b>{company.shortName}</b>

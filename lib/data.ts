@@ -13,9 +13,9 @@ export const company = {
   phoneRu: "+7 929 640-11-62",
   phoneRuHref: "tel:+79296401162",
   whatsapp: "https://wa.me/79296401162",
-  email: "info@kenyacoffee.co.ke",
-  site: "www.kenyacoffee.co.ke",
-  origin: "https://www.kenyacoffee.co.ke",
+  email: "info@simonandsons.store",
+  site: "simonandsons.store",
+  origin: "https://simonandsons.store",
 } as const;
 
 export const routes = [

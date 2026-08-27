@@ -43,7 +43,7 @@ type Copy = {
 };
 
 // ---------------------------------------------------------------------------
-// Commercial figures quoted in the answers. One definition, both languages.
+// Specifications quoted in the answers. One definition, both languages.
 // ---------------------------------------------------------------------------
 const OFFER_SAMPLE_G = 300; // free cupping sample
 const TRIAL_KG = 30; // paid trial lot, air freight
@@ -55,7 +55,6 @@ const CONTAINER_BAGS = 320; // 20' loose-stowed
 const CONTAINER_MAX_T = (CONTAINER_BAGS * bagKg) / 1000; // 19.2 t
 const PALLET_LOSS_PCT = 15; // bags lost to palletised stow
 const AIR_DAYS = [7, 10] as const;
-const AIR_USD_KG = [6, 9] as const;
 const SEA_NOVOROSSIYSK = [25, 32] as const;
 const SEA_STPETERSBURG = [35, 45] as const;
 const CONTRACT_TO_LOAD = [10, 14] as const;
@@ -64,15 +63,6 @@ const INLAND_DAYS = [3, 5] as const;
 const TOTAL_NOVOROSSIYSK = [45, 60] as const;
 const TOTAL_STPETERSBURG = [55, 75] as const;
 const COURIER_DAYS = [4, 6] as const;
-const DEPOSIT_PCT = 30;
-const BALANCE_PCT = 70;
-const HALF_PCT = 50;
-const LC_FROM_T = 5;
-const QUOTE_VALID_DAYS = 7;
-const AA_OVER_AB = [15, 25] as const;
-const SCORE_SPECIALTY = 86;
-const SCORE_COMMERCIAL = 83;
-const CERT_PREMIUM_LB = [0.1, 0.3] as const;
 const CLAIM_DAYS = 14;
 const SCA_TOLERANCE = 1.0;
 const MOISTURE_MAX = 12.5;
@@ -85,12 +75,12 @@ const DOC_YEARS = 7;
 
 const en: Copy = {
   metaTitle: "FAQ for buyers",
-  metaDescription: `Minimum order ${num(MOQ_KG, "en")} kg, free ${num(OFFER_SAMPLE_G, "en")} g samples, FOB Mombasa / CFR / CIF pricing, ${num(DEPOSIT_PCT, "en")}/${num(BALANCE_PCT, "en")} T/T or L/C at sight, ${range(TOTAL_NOVOROSSIYSK[0], TOTAL_NOVOROSSIYSK[1], "en")} days order to warehouse via Novorossiysk — fourteen buyer questions on Kenyan green coffee, answered in full.`,
+  metaDescription: `Minimum order ${num(MOQ_KG, "en")} kg, free ${num(OFFER_SAMPLE_G, "en")} g samples, FOB Mombasa / CFR / CIF terms, payment by T/T or L/C at sight, ${range(TOTAL_NOVOROSSIYSK[0], TOTAL_NOVOROSSIYSK[1], "en")} days order to warehouse via Novorossiysk — fourteen buyer questions on Kenyan green coffee, answered in full.`,
 
   eyebrow: "Buyer questions · answered plainly",
   h1: "Questions we get before the first contract",
   heroLead:
-    "Volumes, samples, Incoterms, payment, transit times, packing, documents, claims and storage — the fourteen things every roaster and importer asks us, with the actual numbers rather than “contact us for details”.",
+    "Volumes, samples, Incoterms, payment, transit times, packing, documents, claims and storage — the fourteen things every roaster and importer asks us, answered with real specifications rather than “contact us for details”. Prices are quoted per contract, against the lot and the volume you actually want.",
 
   glanceEyebrow: "The short version",
   glanceTitle: "Four numbers that answer most of the email",
@@ -99,7 +89,7 @@ const en: Copy = {
   facts: [
     [`${num(MOQ_KG, "en")} kg`, "minimum commercial lot"],
     [`${num(TRIAL_KG, "en")} kg`, "trial lot, sent by air"],
-    [`${num(DEPOSIT_PCT, "en")}/${num(BALANCE_PCT, "en")}`, "T/T deposit and balance"],
+    [`${num(CONTAINER_MAX_T, "en", 1)} t`, "full 20′ container load"],
     [range(SEA_NOVOROSSIYSK[0], SEA_NOVOROSSIYSK[1], "en"), "days at sea to Novorossiysk"],
   ],
 
@@ -119,7 +109,7 @@ const en: Copy = {
           ],
         },
         {
-          q: "Do you send samples, and what do they cost?",
+          q: "Do you send samples?",
           a: [
             `A ${num(OFFER_SAMPLE_G, "en")} g offer sample of any lot on the current list is free, air courier included — ${range(AIR_DAYS[0], AIR_DAYS[1], "en")} days door to door to Moscow or St Petersburg. It ships with the lot's cupping sheet, moisture and water activity readings, so you can check our numbers against your own roast.`,
             "We draw offer samples from the bagged lot, not from a pre-selected showpiece. If the lot is already sold out by the time you cup it, we say so rather than substituting something similar.",
@@ -130,7 +120,7 @@ const en: Copy = {
           q: `We need more than ${num(OFFER_SAMPLE_G, "en")} g. How does a ${num(TRIAL_KG, "en")} kg trial lot work?`,
           a: [
             `${num(OFFER_SAMPLE_G, "en")} g is enough to cup on a sample roaster. It is not enough to profile a coffee on a production machine, and that is where most buying decisions are actually made. So we ship a ${num(TRIAL_KG, "en")} kg trial lot — half a jute bag, packed in GrainPro, by air courier on the same ${range(AIR_DAYS[0], AIR_DAYS[1], "en")} day timing.`,
-            `The green is billed at the contract price for that lot. Air freight runs roughly USD ${range(AIR_USD_KG[0], AIR_USD_KG[1], "en")} per kg to Moscow or St Petersburg and is charged at cost, with the airway bill attached. We credit that freight back against your first order of ${num(MOQ_KG, "en")} kg or more from the same lot, so a trial that turns into business costs you nothing extra.`,
+            `The trial lot is quoted per contract, with the airway bill attached. We credit the air freight back against your first order of ${num(MOQ_KG, "en")} kg or more from the same lot, so a trial that turns into business is not an extra line for you.`,
             "The trial comes out of the sealed lot we would later ship you, not from a lookalike bag. That is the entire point of sending it.",
           ],
         },
@@ -146,33 +136,32 @@ const en: Copy = {
     },
     {
       key: "price",
-      eyebrow: "Price and payment",
-      title: "What it costs and how you pay for it",
-      lede: "Where the quote starts, which levers move it during the season, and the payment structures we work with at each volume.",
+      eyebrow: "Quoting and payment",
+      title: "How we quote and how you pay",
+      lede: "Which Incoterms we work on, how a firm offer is put together, and the payment structures we use at each volume.",
       items: [
         {
-          q: "Is the price FOB, CFR or CIF?",
+          q: "Do you quote FOB, CFR or CIF?",
           a: [
-            `All three — your choice. The base quote is FOB Mombasa: coffee milled, graded, bagged, documented and loaded on board. CFR adds the ocean freight to Novorossiysk or St Petersburg. CIF adds marine insurance, written at the customary ${num(110, "en")} % of invoice value.`,
-            "We quote in USD per kilo of green on net shipped weight, and we break the quote into FOB, freight, insurance and charges as separate lines. You can see exactly what the logistics costs and put your own forwarder against it if theirs is cheaper. There is no margin hidden in the freight line.",
+            "All three — your choice. The base is FOB Mombasa: coffee milled, graded, bagged, documented and loaded on board. CFR adds the ocean freight to Novorossiysk or St Petersburg. CIF adds marine insurance on the customary institute cargo clauses.",
+            "Whichever term you work on, the offer is broken out into FOB, freight, insurance and charges as separate lines rather than one lump. You can see exactly what the logistics leg carries and put your own forwarder against it if theirs is sharper. There is nothing hidden in the freight line.",
             "DAP to a Russian warehouse we quote case by case. Customs clearance and the inland leg depend on your import setup and your broker, and most buyers run that side better than we could from Nairobi.",
           ],
         },
         {
-          q: "What actually moves the price?",
+          q: "How do we get a quote?",
           a: [
-            `Four things, roughly in order of weight. The Nairobi Coffee Exchange auction, which runs weekly through the season and sets the ground price for Kenyan grades. The ICE “C” contract, which the differential is quoted against. Grade and screen — AA over AB is normally ${range(AA_OVER_AB[0], AA_OVER_AB[1], "en")} %. And the cup: an ${num(SCORE_SPECIALTY, "en")}+ lot from a named wet mill trades in a different market from a clean commercial ${num(SCORE_COMMERCIAL, "en")}.`,
-            "Then the smaller levers — ocean freight and bunker surcharges, the shilling against the dollar, certification premiums, and how far ahead you book. A lot contracted in January against the main crop is materially cheaper than the same lot chased in April.",
-            `Quotes are firm for ${num(QUOTE_VALID_DAYS, "en")} days. After that we re-quote, because the auction will have moved and we would rather re-price than quietly downgrade the lot.`,
+            "Tell us the grade, the volume, the port and the Incoterm you work on. We come back with the lots we can actually cover and an offer sample for each. Figures are quoted per contract and stay off this page — the auction moves every week, and a stale number on a website helps nobody.",
+            "The firm offer follows sample approval. It names the lot, the grade, the Incoterm and the shipping window, so what you sign is what you cupped.",
+            "Nothing here is sold off a list. Every offer is built against a named lot, already milled or still in parchment, and we tell you which it is before you commit.",
           ],
         },
         {
           q: "What are the payment terms?",
           a: [
-            `Up to ${num(REGULAR_KG, "en")} kg: ${num(100, "en")} % T/T in advance, or ${num(HALF_PCT, "en")} % on contract and ${num(HALF_PCT, "en")} % against the scanned bill of lading once we have traded before.`,
-            `From ${num(REGULAR_KG, "en")} kg to container volumes: ${num(DEPOSIT_PCT, "en")} % T/T deposit on signature, ${num(BALANCE_PCT, "en")} % against the scanned B/L and the full document set. Originals go by courier as soon as the balance clears.`,
-            `From ${num(LC_FROM_T, "en")} t we also work on an irrevocable letter of credit at sight, payable in Nairobi and confirmed by a first-class bank. L/C is the normal route for a first container with a new counterparty — it protects both sides — and we pay our own half of the bank charges.`,
-            "Samples and trial lots are prepaid. Everything is invoiced in USD; we do not price in KES or RUB, because neither of us wants to carry that risk across a sixty-day transit.",
+            "Payment is by bank transfer (T/T) against the documents named in the contract — normally the scanned bill of lading and the full document set. The schedule is agreed lot by lot in the contract itself, not fixed on a web page.",
+            "From container volumes we also work on an irrevocable letter of credit at sight, payable in Nairobi and confirmed by a first-class bank. L/C is the normal route for a first container with a new counterparty — it protects both sides — and we carry our own bank charges.",
+            "Samples and trial lots are prepaid. Invoicing is in USD, and originals of the document set go by courier as soon as payment clears.",
           ],
         },
       ],
@@ -186,7 +175,7 @@ const en: Copy = {
         {
           q: "How long does it take from order to arrival?",
           a: [
-            `Contract and deposit to loaded on board in Mombasa: ${range(CONTRACT_TO_LOAD[0], CONTRACT_TO_LOAD[1], "en")} days if the lot is already milled and in the warehouse. If it is still in parchment, add the milling and conditioning window — we will tell you which it is before you sign.`,
+            `Contract signature to loaded on board in Mombasa: ${range(CONTRACT_TO_LOAD[0], CONTRACT_TO_LOAD[1], "en")} days if the lot is already milled and in the warehouse. If it is still in parchment, add the milling and conditioning window — we will tell you which it is before you sign.`,
             `Sea leg: ${range(SEA_NOVOROSSIYSK[0], SEA_NOVOROSSIYSK[1], "en")} days Mombasa to Novorossiysk, ${range(SEA_STPETERSBURG[0], SEA_STPETERSBURG[1], "en")} days to St Petersburg — the gap is routing and the number of transhipments. Add ${range(CLEARANCE_DAYS[0], CLEARANCE_DAYS[1], "en")} days for discharge and customs clearance, then ${range(INLAND_DAYS[0], INLAND_DAYS[1], "en")} days by road to Moscow; the Urals and Siberia go by rail and take longer.`,
             `Plan on ${range(TOTAL_NOVOROSSIYSK[0], TOTAL_NOVOROSSIYSK[1], "en")} days order to warehouse via Novorossiysk and ${range(TOTAL_STPETERSBURG[0], TOTAL_STPETERSBURG[1], "en")} days via St Petersburg. Air freight collapses that to ${range(AIR_DAYS[0], AIR_DAYS[1], "en")} days, but the economics only work up to about ${num(TRIAL_KG, "en")} kg.`,
             "You get a written update at three points — lot sealed, container loaded, B/L issued — plus the vessel and booking reference. You should never have to ask us where your coffee is.",
@@ -196,8 +185,8 @@ const en: Copy = {
           q: "How is the coffee packed?",
           a: [
             `Standard packing is a ${num(bagKg, "en")} kg jute bag with a GrainPro liner inside. The liner is what holds moisture and water activity at the values we measured in Nairobi, through the equator and through a Russian winter — jute alone will not do it.`,
-            `We also pack ${num(TRIAL_KG, "en")} kg and ${num(15, "en")} kg bags to order. Small bags cost more per kilo — more liners, more labour, more pallet space — but they save a great deal of decanting if your roastery works in ${num(15, "en")} kg batches.`,
-            `A ${num(20, "en")}′ container takes ${num(CONTAINER_BAGS, "en")} bags of ${num(bagKg, "en")} kg loose-stowed, so ${num(CONTAINER_MAX_T, "en", 1)} t. Palletised stow costs about ${num(PALLET_LOSS_PCT, "en")} % of that bag count but unloads with a forklift instead of a crew; the exact figure goes on the packing list before loading.`,
+            `We also pack ${num(TRIAL_KG, "en")} kg and ${num(15, "en")} kg bags to order — more liners, more labour and more pallet space on our side, but a great deal less decanting on yours if your roastery works in ${num(15, "en")} kg batches.`,
+            `A ${num(20, "en")}′ container takes ${num(CONTAINER_BAGS, "en")} bags of ${num(bagKg, "en")} kg loose-stowed, so ${num(CONTAINER_MAX_T, "en", 1)} t. Palletised stow takes about ${num(PALLET_LOSS_PCT, "en")} % off that bag count but unloads with a forklift instead of a crew; the exact figure goes on the packing list before loading.`,
             "Every bag is stencilled with the lot number, grade, crop year, net weight and the ICO mark, so a bag on your floor can still be traced back to a wet mill in Nyeri.",
           ],
         },
@@ -221,7 +210,7 @@ const en: Copy = {
           q: "Is the coffee certified? How far does traceability go?",
           a: [
             `Traceability first, because it is the part we can promise on every single lot: cooperative or estate, wet mill, region, altitude, variety, harvest date and milling date, printed on the lot passport that ships with the coffee. Ask us about ${lotPassport.id} and we can name the wet mill in Nyeri it came off and the week it was picked.`,
-            `Certification is lot by lot, not company-wide. We have Rainforest Alliance and Fairtrade lots from several of the cooperatives we buy through, normally at a premium of USD ${range(CERT_PREMIUM_LB[0], CERT_PREMIUM_LB[1], "en", 2)} per lb over the conventional price. Certified organic is genuinely scarce in Kenya and we will not pretend otherwise — where it exists the volumes are small and booked early.`,
+            "Certification is lot by lot, not company-wide. We have Rainforest Alliance and Fairtrade lots from several of the cooperatives we buy through, quoted on request against the specific lot. Certified organic is genuinely scarce in Kenya and we will not pretend otherwise — where it exists the volumes are small and booked early.",
             "We also collect GPS polygons for the plots behind our main-crop lots. That work started as EU deforestation-regulation compliance, but it is useful to any buyer: it is the difference between saying a coffee is traceable and being able to show where it grew.",
           ],
         },
@@ -270,12 +259,12 @@ const en: Copy = {
 
 const ru: Copy = {
   metaTitle: "Вопросы и ответы для покупателей",
-  metaDescription: `Минимальная партия ${num(MOQ_KG, "ru")} кг, бесплатный образец ${num(OFFER_SAMPLE_G, "ru")} г, цена FOB Момбаса / CFR / CIF, оплата ${num(DEPOSIT_PCT, "ru")}/${num(BALANCE_PCT, "ru")} T/T или аккредитив, ${range(TOTAL_NOVOROSSIYSK[0], TOTAL_NOVOROSSIYSK[1], "ru")} дней от заказа до склада через Новороссийск — четырнадцать вопросов о кенийском зелёном кофе с развёрнутыми ответами.`,
+  metaDescription: `Минимальная партия ${num(MOQ_KG, "ru")} кг, бесплатный образец ${num(OFFER_SAMPLE_G, "ru")} г, условия поставки FOB Момбаса / CFR / CIF, оплата T/T или аккредитивом, ${range(TOTAL_NOVOROSSIYSK[0], TOTAL_NOVOROSSIYSK[1], "ru")} дней от заказа до склада через Новороссийск — четырнадцать вопросов о кенийском зелёном кофе с развёрнутыми ответами.`,
 
   eyebrow: "Вопросы покупателей · ответы по существу",
   h1: "Вопросы, которые задают до первого контракта",
   heroLead:
-    "Объёмы, образцы, условия Incoterms, оплата, сроки доставки, упаковка, документы, претензии и хранение — четырнадцать вопросов, которые нам задают чаще всего, с конкретными цифрами вместо «уточняйте у менеджера».",
+    "Объёмы, образцы, условия Incoterms, оплата, сроки доставки, упаковка, документы, претензии и хранение — четырнадцать вопросов, которые нам задают чаще всего, с конкретными характеристиками вместо «уточняйте у менеджера». Цену мы называем по конкретному лоту и объёму — по запросу.",
 
   glanceEyebrow: "Коротко",
   glanceTitle: "Четыре цифры, которые закрывают половину переписки",
@@ -284,7 +273,7 @@ const ru: Copy = {
   facts: [
     [`${num(MOQ_KG, "ru")} кг`, "минимальная партия"],
     [`${num(TRIAL_KG, "ru")} кг`, "пробная партия авиа"],
-    [`${num(DEPOSIT_PCT, "ru")}/${num(BALANCE_PCT, "ru")}`, "аванс и остаток T/T"],
+    [`${num(CONTAINER_MAX_T, "ru", 1)} т`, "полный 20-футовый контейнер"],
     [range(SEA_NOVOROSSIYSK[0], SEA_NOVOROSSIYSK[1], "ru"), "дня морем до Новороссийска"],
   ],
 
@@ -304,7 +293,7 @@ const ru: Copy = {
           ],
         },
         {
-          q: "Вы отправляете образцы и сколько это стоит?",
+          q: "Вы отправляете образцы?",
           a: [
             `Образец ${num(OFFER_SAMPLE_G, "ru")} г любого лота из текущего листа — бесплатно, вместе с авиадоставкой: ${range(AIR_DAYS[0], AIR_DAYS[1], "ru")} дней до двери в Москве или Санкт-Петербурге. К образцу прилагается каппинг-лист лота, влажность и водная активность, чтобы вы могли сверить наши цифры со своей обжаркой.`,
             "Образцы мы отбираем из уже упакованного лота, а не из специально подготовленной витрины. Если к моменту каппинга лот продан, мы так и пишем, а не подменяем его «похожим».",
@@ -315,7 +304,7 @@ const ru: Copy = {
           q: `Нужно больше ${num(OFFER_SAMPLE_G, "ru")} г. Как работает пробная партия ${num(TRIAL_KG, "ru")} кг?`,
           a: [
             `${num(OFFER_SAMPLE_G, "ru")} г хватает на каппинг на сэмпл-ростере, но не на профиль для производственного ростера — а решение о закупке принимается именно там. Поэтому мы отправляем пробную партию ${num(TRIAL_KG, "ru")} кг: полмешка GrainPro, авиадоставкой, те же ${range(AIR_DAYS[0], AIR_DAYS[1], "ru")} дней.`,
-            `Зерно считается по контрактной цене лота. Авиафрахт до Москвы или Санкт-Петербурга обходится примерно в ${range(AIR_USD_KG[0], AIR_USD_KG[1], "ru")} USD за кг и выставляется по себестоимости, с приложением авианакладной. Эту сумму мы засчитываем в счёт первого заказа от ${num(MOQ_KG, "ru")} кг из того же лота — то есть проба, которая переросла в поставку, не стоит вам ничего дополнительно.`,
+            `Пробная партия котируется под контракт, с приложением авианакладной. Авиафрахт мы засчитываем в счёт первого заказа от ${num(MOQ_KG, "ru")} кг из того же лота — проба, которая переросла в поставку, не становится для вас отдельной статьёй.`,
             "Пробная партия отбирается из того же опечатанного лота, который потом уйдёт вам контейнером, а не из похожего мешка. В этом весь смысл пробы.",
           ],
         },
@@ -331,33 +320,32 @@ const ru: Copy = {
     },
     {
       key: "price",
-      eyebrow: "Цена и оплата",
-      title: "Сколько стоит и как платить",
-      lede: "С чего начинается котировка, что двигает цену в течение сезона и какие схемы оплаты мы используем на каждом объёме.",
+      eyebrow: "Котировка и оплата",
+      title: "Как формируется предложение и как платить",
+      lede: "На каких условиях Incoterms мы работаем, как собирается твёрдое предложение и какие схемы оплаты используем на разных объёмах.",
       items: [
         {
-          q: "Цена указывается на условиях FOB, CFR или CIF?",
+          q: "Вы котируете на условиях FOB, CFR или CIF?",
           a: [
-            `Все три — по вашему выбору. Базовая котировка — FOB Момбаса: кофе обмолочен, откалиброван, упакован, оформлен и погружен на борт. CFR добавляет морской фрахт до Новороссийска или Санкт-Петербурга. CIF добавляет морское страхование на стандартные ${num(110, "ru")} % от инвойсовой стоимости.`,
-            "Котировка — в долларах за килограмм зелёного зерна по нетто отгрузки. Прозрачная цена с разбивкой по FOB, фрахту и сборам: вы видите, сколько стоит логистика, и можете поставить рядом своего экспедитора, если у него дешевле. Никакой наценки, спрятанной в строке фрахта.",
+            "Все три — по вашему выбору. База — FOB Момбаса: кофе обмолочен, откалиброван, упакован, оформлен и погружен на борт. CFR добавляет морской фрахт до Новороссийска или Санкт-Петербурга. CIF добавляет морское страхование на стандартных institute cargo clauses.",
+            "На любых условиях предложение разбито по строкам: FOB, фрахт, страхование, сборы — а не одной суммой. Вы видите, что именно берёт на себя логистика, и можете поставить рядом своего экспедитора, если у него условия лучше. В строке фрахта ничего не спрятано.",
             "DAP до склада в России считаем индивидуально. Таможенное оформление и внутреннее плечо зависят от вашей схемы импорта и брокера, и почти все покупатели ведут эту часть лучше, чем это можно сделать из Найроби.",
           ],
         },
         {
-          q: "Что реально влияет на цену?",
+          q: "Как получить предложение?",
           a: [
-            `Четыре фактора, примерно в порядке значимости. Аукцион Nairobi Coffee Exchange, который идёт еженедельно весь сезон и задаёт базовую цену на кенийские грейды. Биржевой контракт ICE «C», к которому котируется дифференциал. Грейд и скрин: AA дороже AB обычно на ${range(AA_OVER_AB[0], AA_OVER_AB[1], "ru")} %. И чашка: лот на ${num(SCORE_SPECIALTY, "ru")}+ с именной мойки торгуется в другом сегменте, чем чистый коммерческий ${num(SCORE_COMMERCIAL, "ru")}.`,
-            "Дальше идут более мелкие рычаги — морской фрахт и бункерные надбавки, курс шиллинга к доллару, надбавки за сертификацию и глубина бронирования. Лот, законтрактованный в январе под основной урожай, заметно дешевле того же лота, который догоняют в апреле.",
-            `Котировка действительна ${num(QUOTE_VALID_DAYS, "ru")} дней. Дальше мы пересчитываем: аукцион за это время уходит, и честнее пересмотреть цену, чем тихо понизить качество лота.`,
+            "Напишите грейд, объём, порт назначения и условия поставки. В ответ придут лоты, которые мы реально можем закрыть, и офферный образец по каждому. Цифры идут в предложении под контракт и на сайте не публикуются: аукцион двигается каждую неделю, и устаревшая цифра на сайте не помогает никому.",
+            "Твёрдое предложение выходит после утверждения образца. В нём названы лот, грейд, условия поставки и окно отгрузки — вы подписываете то, что каппинговали.",
+            "Мы не торгуем «по прайсу вообще». Каждое предложение собирается под конкретный лот — уже обмолоченный или ещё в пергаменте, — и мы говорим об этом до подписания.",
           ],
         },
         {
           q: "Какие условия оплаты?",
           a: [
-            `До ${num(REGULAR_KG, "ru")} кг: ${num(100, "ru")} % предоплата банковским переводом либо ${num(HALF_PCT, "ru")} % при подписании и ${num(HALF_PCT, "ru")} % против скана коносамента, если мы уже работали вместе.`,
-            `От ${num(REGULAR_KG, "ru")} кг до контейнера: ${num(DEPOSIT_PCT, "ru")} % аванса T/T при подписании контракта, ${num(BALANCE_PCT, "ru")} % против скана коносамента и полного пакета документов. Оригиналы уходят курьером сразу после поступления остатка.`,
-            `От ${num(LC_FROM_T, "ru")} т мы также работаем по безотзывному аккредитиву с платежом по предъявлении, исполняемому в Найроби и подтверждённому первоклассным банком. Для первого контейнера с новым контрагентом это обычная схема — она защищает обе стороны, и свою половину банковских комиссий мы платим сами.`,
-            "Образцы и пробные партии — по предоплате. Все счета в долларах США: ни нам, ни вам не нужен валютный риск на шестидесятидневном транзите.",
+            "Оплата — банковским переводом (T/T) против документов, названных в контракте: как правило, скан коносамента и полный пакет. График согласуется по каждому лоту в самом контракте, а не фиксируется на сайте.",
+            "От контейнерных объёмов мы также работаем по безотзывному аккредитиву с платежом по предъявлении, исполняемому в Найроби и подтверждённому первоклассным банком. Для первого контейнера с новым контрагентом это обычная схема — она защищает обе стороны, — и свои банковские комиссии мы несём сами.",
+            "Образцы и пробные партии — по предоплате. Счета выставляются в долларах США, оригиналы документов уходят курьером сразу после поступления оплаты.",
           ],
         },
       ],
@@ -371,7 +359,7 @@ const ru: Copy = {
         {
           q: "Сколько времени проходит от заказа до прибытия?",
           a: [
-            `От контракта и аванса до погрузки на борт в Момбасе — ${range(CONTRACT_TO_LOAD[0], CONTRACT_TO_LOAD[1], "ru")} дней, если лот уже обмолочен и лежит на складе. Если он ещё в пергаменте, добавляется окно обмолота и отлёжки — мы скажем об этом до подписания.`,
+            `От подписания контракта до погрузки на борт в Момбасе — ${range(CONTRACT_TO_LOAD[0], CONTRACT_TO_LOAD[1], "ru")} дней, если лот уже обмолочен и лежит на складе. Если он ещё в пергаменте, добавляется окно обмолота и отлёжки — мы скажем об этом до подписания.`,
             `Морское плечо: ${range(SEA_NOVOROSSIYSK[0], SEA_NOVOROSSIYSK[1], "ru")} дня Момбаса — Новороссийск и ${range(SEA_STPETERSBURG[0], SEA_STPETERSBURG[1], "ru")} дней до Санкт-Петербурга; разница — в маршруте и количестве перевалок. Плюс ${range(CLEARANCE_DAYS[0], CLEARANCE_DAYS[1], "ru")} дней на выгрузку и таможенное оформление и ${range(INLAND_DAYS[0], INLAND_DAYS[1], "ru")} дня автотранспортом до Москвы; на Урал и в Сибирь груз идёт по железной дороге и дольше.`,
             `Ориентируйтесь на ${range(TOTAL_NOVOROSSIYSK[0], TOTAL_NOVOROSSIYSK[1], "ru")} дней от заказа до склада через Новороссийск и ${range(TOTAL_STPETERSBURG[0], TOTAL_STPETERSBURG[1], "ru")} дней через Санкт-Петербург. Для проб доступна авиадоставка ${range(AIR_DAYS[0], AIR_DAYS[1], "ru")} дней, но экономически она оправдана примерно до ${num(TRIAL_KG, "ru")} кг.`,
             "Вы получаете письменное уведомление в трёх точках — лот опечатан, контейнер загружен, коносамент выпущен — вместе с судном и номером букинга. Спрашивать «где мой кофе» не приходится.",
@@ -381,7 +369,7 @@ const ru: Copy = {
           q: "Как упакован кофе?",
           a: [
             `Стандартная упаковка — джутовый мешок ${num(bagKg, "ru")} кг с вкладышем GrainPro. Именно вкладыш удерживает влажность и водную активность на тех значениях, которые мы замерили в Найроби, — через экватор и через русскую зиму. Один джут этого не даёт.`,
-            `Возможна фасовка ${num(TRIAL_KG, "ru")} и ${num(15, "ru")} кг под ваш склад. Мелкая фасовка дороже в пересчёте на килограмм — больше вкладышей, больше ручного труда, больше места на паллете, — но она снимает перефасовку, если производство работает партиями по ${num(15, "ru")} кг.`,
+            `Возможна фасовка ${num(TRIAL_KG, "ru")} и ${num(15, "ru")} кг под ваш склад: с нашей стороны это больше вкладышей, ручного труда и места на паллете, зато у вас нет перефасовки, если производство работает партиями по ${num(15, "ru")} кг.`,
             `В ${num(20, "ru")}-футовый контейнер входит ${num(CONTAINER_BAGS, "ru")} мешков по ${num(bagKg, "ru")} кг навалом, то есть ${num(CONTAINER_MAX_T, "ru", 1)} т. Паллетная загрузка отнимает около ${num(PALLET_LOSS_PCT, "ru")} % от этого количества, зато выгружается погрузчиком, а не бригадой; точная цифра фиксируется в упаковочном листе до погрузки.`,
             "На каждом мешке трафаретом нанесены номер лота, грейд, год урожая, вес нетто и маркировка ICO — мешок на вашем складе по-прежнему прослеживается до конкретной мойки в Ньери.",
           ],
@@ -406,7 +394,7 @@ const ru: Copy = {
           q: "Кофе сертифицирован? Насколько глубока прослеживаемость?",
           a: [
             `Сначала прослеживаемость, потому что её мы гарантируем по каждому лоту: кооператив или эстейт, мойка, регион, высота, сорт, дата сбора и дата обмолота — всё это напечатано в паспорте лота, который идёт вместе с кофе. Спросите про ${lotPassport.id}, и мы назовём мойку в Ньери и неделю сбора.`,
-            `Сертификация — вопрос конкретного лота, а не компании целиком. У части кооперативов, с которыми мы работаем, есть лоты Rainforest Alliance и Fairtrade — как правило, с надбавкой ${range(CERT_PREMIUM_LB[0], CERT_PREMIUM_LB[1], "ru", 2)} USD за фунт к обычной цене. Сертифицированной органики в Кении объективно мало, и мы не станем делать вид, что это не так: там, где она есть, объёмы небольшие и разбираются заранее.`,
+            "Сертификация — вопрос конкретного лота, а не компании целиком. У части кооперативов, с которыми мы работаем, есть лоты Rainforest Alliance и Fairtrade — они котируются по запросу под конкретный лот. Сертифицированной органики в Кении объективно мало, и мы не станем делать вид, что это не так: там, где она есть, объёмы небольшие и разбираются заранее.",
             "По основным урожаям мы также собираем GPS-полигоны участков. Эта работа начиналась под европейский регламент о вырубке лесов, но полезна любому покупателю: это разница между словами «кофе прослеживаемый» и возможностью показать, где именно он вырос.",
           ],
         },

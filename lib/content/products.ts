@@ -68,7 +68,7 @@ const en: Copy = {
 
   gradesEyebrow: "Specification · 2025/26 crop",
   gradesTitle: "What the grade letter actually buys you",
-  gradesIntro: `A Kenyan grade describes size and density after hulling, not cup quality on its own — AA and AB off the same wet mill can sit ${num(0.5, "en", 1)} SCA points apart and ${num(20, "en")} % apart on price. Screen, size, cup character and minimum lot are the four lines that end up in the contract.`,
+  gradesIntro: `A Kenyan grade describes size and density after hulling, not cup quality on its own — AA and AB off the same wet mill can sit ${num(0.5, "en", 1)} SCA points apart and are quoted separately. Screen, size, cup character and minimum lot are the four lines that end up in the contract.`,
   gradeCards: [
     {
       code: "AA",
@@ -153,7 +153,7 @@ const ru: Copy = {
 
   gradesEyebrow: "Спецификация · сезон 2025/26",
   gradesTitle: "Что на самом деле означает буква грейда",
-  gradesIntro: `Кенийский грейд описывает размер и плотность зерна после обмолота, а не качество чашки само по себе: AA и AB с одной мойки могут различаться на ${num(0.5, "ru", 1)} балла SCA и до ${num(20, "ru")} % в цене. Скрин, размер, характер чашки и минимальная партия — четыре строки, которые попадают в контракт.`,
+  gradesIntro: `Кенийский грейд описывает размер и плотность зерна после обмолота, а не качество чашки само по себе: AA и AB с одной мойки могут различаться на ${num(0.5, "ru", 1)} балла SCA и котируются отдельно. Скрин, размер, характер чашки и минимальная партия — четыре строки, которые попадают в контракт.`,
   gradeCards: [
     {
       code: "AA",

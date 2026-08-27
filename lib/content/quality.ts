@@ -239,7 +239,7 @@ const en: Copy = {
     },
     {
       title: "You get a replacement, not an argument",
-      text: "The remaining lots from the same wet mill are re-cupped that week and a replacement is offered at the contracted grade and price. If nothing matches, we say so and release you from the volume instead of substituting quietly.",
+      text: "The remaining lots from the same wet mill are re-cupped that week and a replacement is offered at the contracted grade, on the same contract terms. If nothing matches, we say so and release you from the volume instead of substituting quietly.",
     },
     {
       title: "Retained samples settle claims",
@@ -413,7 +413,7 @@ const ru: Copy = {
     },
     {
       title: "Вы получаете замену, а не спор",
-      text: "Оставшиеся лоты с той же мойки перекаппиваются в ту же неделю, и замена предлагается в том же грейде и по контрактной цене. Если ничего не совпадает — говорим прямо и снимаем с вас объём, а не подставляем другой кофе молча.",
+      text: "Оставшиеся лоты с той же мойки перекаппиваются в ту же неделю, и замена предлагается в том же грейде и на условиях того же контракта. Если ничего не совпадает — говорим прямо и снимаем с вас объём, а не подставляем другой кофе молча.",
     },
     {
       title: "Претензии закрываются контрольным образцом",

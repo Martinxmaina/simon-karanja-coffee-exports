@@ -1,5 +1,5 @@
 // Market updates page copy: dated notes on the 2025/26 Kenyan crop — harvest
-// progress, Nairobi Coffee Exchange auction direction, freight and transit to
+// progress, Nairobi Coffee Exchange activity, shipping space and transit to
 // the Black Sea and the Baltic, cup quality and booking advice.
 //
 // Dates are ISO strings and stay unformatted here: the page renders them with
@@ -42,17 +42,17 @@ type Copy = {
 const en: Copy = {
   metaTitle: "Market updates from the 2025/26 Kenyan crop",
   metaDescription:
-    "Dated notes for green buyers: main crop progress and volumes, Nairobi Coffee Exchange price direction, freight and transit to Black Sea and Baltic ports, cup quality on the 2025/26 crop and when to book.",
+    "Dated notes for green buyers: main crop progress and volumes, what is moving at the Nairobi Coffee Exchange, shipping space and transit to Black Sea and Baltic ports, cup quality on the 2025/26 crop and when to book.",
 
   eyebrow: "Market updates · 2025/26 season",
   h1: "Market notes from the 2025/26 crop",
   heroLede:
-    "Short, dated notes on the things a green buyer actually tracks: how the crop is picking, where the Nairobi auction is clearing, what freight and transit to the Black Sea and the Baltic look like this month, and how the current crop is cupping on our table.",
+    "Short, dated notes on the things a green buyer actually tracks: how the crop is picking, what is moving at the Nairobi auction, how space and transit to the Black Sea and the Baltic look this month, and how the current crop is cupping on our table.",
 
   listEyebrow: "Newest first",
   listTitle: "Six notes from the season",
   listLede:
-    "We publish a note when something changes that would move a buying decision — a harvest running late, a sale clearing above expectation, sailings tightening. Older notes stay up unedited, so you can see how the season actually developed rather than how it reads in hindsight.",
+    "We publish a note when something changes that would move a buying decision — a harvest running late, a catalogue clearing out faster than anyone expected, sailings tightening. Older notes stay up unedited, so you can see how the season actually developed rather than how it reads in hindsight.",
 
   notes: [
     {
@@ -60,7 +60,7 @@ const en: Copy = {
       tag: "Logistics",
       title: "Book December and January sailings now",
       paras: [
-        `Space out of Mombasa for December and January loading is already being taken. Our forwarders are quoting USD ${range(2600, 3100, "en")} per 20' dry container to Novorossiysk and USD ${range(3200, 3900, "en")} to St Petersburg — around ${num(12, "en")}% above where the same slots booked in March, with the Red Sea security surcharge still attached.`,
+        `Space out of Mombasa for December and January loading is already being taken. Our forwarders are holding fewer open slots than they had in March, and the Red Sea routing still adds a leg to most rotations. Carriage terms are confirmed in your offer for the specific shipment window rather than carried over from the last one.`,
         `Transit itself is holding: ${range(25, 32, "en")} days to Novorossiysk, ${range(35, 45, "en")} days to St Petersburg. The variance sits in the transhipment. A missed connection at Jebel Ali or Salalah adds ${range(4, 7, "en")} days and there is no way to buy that risk down after the fact, so we are booking ${range(3, 4, "en")} weeks ahead of the vessel instead of the usual two.`,
         `Practical deadline: a new-crop lot contracted by mid-October ships in December and clears at destination in February. Contract later and you are buying whatever is left in the warehouse in March. We put the vessel and the ETA on the confirmation, not just the shipping month, so the date you plan production around is one you can hold us to.`,
       ],
@@ -68,11 +68,11 @@ const en: Copy = {
     {
       date: "2026-07-14",
       tag: "Auction",
-      title: "Season closes with AA firm and AB the value buy",
+      title: "Season closes on thin catalogues, and AB is the lot we would take",
       paras: [
-        `The Nairobi Coffee Exchange ran the last sale of the 2025/26 season on Tuesday with about ${num(8400, "en")} bags on offer, against the ${range(14000, 18000, "en")} bags that were changing hands in February. Thin end-of-season catalogues usually mean firm prices, and that is what happened: Nyeri and Kirinyaga AA cleared at USD ${range(385, 455, "en")} per ${num(50, "en")} kg bag, AB out of the same wet mills at USD ${range(305, 360, "en")}.`,
-        `Across the season AA averaged roughly ${num(9, "en")}% above 2024/25 and AB about ${num(6, "en")}%. The spread between the two grades widened rather than narrowed, which tells you what the competition was for: screen size for single-origin menus, not cup score.`,
-        `Our read for the coming months is that AB from a mill whose AA you already like is the best value on the board — same picking day, same fermentation, same drying tables, ${range(1, 2, "en")} points off the cup and a third off the price. Where the profile matters more than the bean size, we would rather put you into AB and spend the difference on freight and rest time.`,
+        `The Nairobi Coffee Exchange ran the last sale of the 2025/26 season on Tuesday with about ${num(8400, "en")} bags on offer, against the ${range(14000, 18000, "en")} bags that were changing hands in February. End-of-season catalogues are thin and picked over: the Nyeri and Kirinyaga AA that did come forward was spoken for quickly, mostly by buyers who already had a standing relationship with the wet mill.`,
+        `What the season competed for was screen size for single-origin menus, not cup score. AB out of the same wet mills moved in smaller parcels and later in the day — a demand story, not a quality one.`,
+        `Our read for the coming months is that AB from a mill whose AA you already like is the lot to take: same picking day, same fermentation, same drying tables, ${range(1, 2, "en")} points off the cup and the same behaviour in the roaster. Where the profile matters more than the bean size, ask for AB — we quote both grades off the same mill on request.`,
       ],
     },
     {
@@ -100,9 +100,9 @@ const en: Copy = {
       tag: "Auction",
       title: "February bidding narrows to the top screens",
       paras: [
-        `Yesterday's sale carried ${num(16200, "en")} bags, one of the larger catalogues of the season, and still cleared almost completely. AA from the Central Kenya mills went at USD ${range(400, 470, "en")} per ${num(50, "en")} kg bag, AB from the same lots at USD ${range(300, 350, "en")}, and PB traded at a ${range(5, 8, "en")}% discount to AB.`,
-        `Two things are driving it. Global arabica remains historically expensive, so buyers working on differentials are less price-sensitive than usual. And the main crop we called at ${range(50000, 53000, "en")} t in December has come in near the bottom of that range, at about ${num(50800, "en")} t clean.`,
-        `For anyone still uncovered on Kenya this year: the market is unlikely to get cheaper before the fly crop, and the fly crop will not cover a serious programme. Cover the volume you know you need now and leave the speculative tonnage alone.`,
+        `Yesterday's sale carried ${num(16200, "en")} bags, one of the larger catalogues of the season, and still cleared almost completely. AA from the Central Kenya mills went first, AB out of the same lots followed, and PB found its buyers late in the day — the pattern all season has been bidding concentrating on the top screens.`,
+        `Two things are driving it. Global arabica supply is tight, so buyers are covering earlier in the season than usual. And the main crop we called at ${range(50000, 53000, "en")} t in December has come in near the bottom of that range, at about ${num(50800, "en")} t clean.`,
+        `For anyone still uncovered on Kenya this year: availability will not get easier before the fly crop, and the fly crop will not cover a serious programme. Cover the volume you know you need now and leave the speculative tonnage alone.`,
       ],
     },
     {
@@ -118,29 +118,29 @@ const en: Copy = {
   ],
 
   ctaEyebrow: "Before you act on any of this",
-  ctaTitle: "Ask for the numbers behind a note",
+  ctaTitle: "Ask for what sits behind a note",
   ctaLede:
-    "Every figure above comes from a lot, a sale or a booking we were part of. If one of them matters to a decision you are making, we will show you where it came from — the auction slip, the cupping sheet or the freight quote.",
+    "Every figure above comes from a lot, a sale or a booking we were part of. If one of them matters to a decision you are making, we will show you where it came from — the auction slip, the cupping sheet or the booking confirmation.",
   disclaimerLabel: "Indicative, not trading advice.",
   disclaimerText:
-    "These are our own observations from the mills, the auction floor and our forwarders' booking desks. Prices, volumes and transit times are indicative, move week to week, and are not an offer, a quotation or trading advice. For a firm price on a specific grade and shipment window, ask us for a current offer sheet.",
+    "These are our own observations from the mills, the auction floor and our forwarders' booking desks. Volumes and transit times are indicative, move week to week, and are not an offer, a quotation or trading advice. For a firm price on a specific grade and shipment window, ask us for a current offer sheet.",
   cta: "Request a current offer sheet",
 };
 
 const ru: Copy = {
   metaTitle: "Обзор рынка кенийского кофе — сезон 2025/26",
   metaDescription:
-    "Датированные заметки для закупщиков: ход основного урожая и объёмы, направление цен на аукционе в Найроби, фрахт и сроки доставки в порты Чёрного и Балтийского морей, качество чашки текущего урожая и когда бронировать отгрузку.",
+    "Датированные заметки для закупщиков: ход основного урожая и объёмы, что происходит на аукционе в Найроби, места на судах и сроки доставки в порты Чёрного и Балтийского морей, качество чашки текущего урожая и когда бронировать отгрузку.",
 
   eyebrow: "Обзор рынка · сезон 2025/26",
   h1: "Рынок кенийского кофе: сезон 2025/26",
   heroLede:
-    "Короткие датированные заметки о том, что действительно влияет на закупку: как идёт сбор, по каким ценам уходят лоты на аукционе в Найроби, что происходит с фрахтом и сроками доставки в Новороссийск и Санкт-Петербург и как текущий урожай ведёт себя на каппинг-столе.",
+    "Короткие датированные заметки о том, что действительно влияет на закупку: как идёт сбор, что происходит на аукционе в Найроби, как обстоят дела с местами на судах и сроками доставки в Новороссийск и Санкт-Петербург и как текущий урожай ведёт себя на каппинг-столе.",
 
   listEyebrow: "Сначала свежие",
   listTitle: "Шесть заметок за сезон",
   listLede:
-    "Мы публикуем заметку тогда, когда меняется что-то, способное повлиять на решение о закупке: сбор сдвинулся, торги ушли выше ожиданий, на линии стало тесно с местами. Старые заметки остаются без правок — по ним видно, как сезон разворачивался на самом деле, а не как он выглядит задним числом.",
+    "Мы публикуем заметку тогда, когда меняется что-то, способное повлиять на решение о закупке: сбор сдвинулся, каталог разобрали быстрее ожидаемого, на линии стало тесно с местами. Старые заметки остаются без правок — по ним видно, как сезон разворачивался на самом деле, а не как он выглядит задним числом.",
 
   notes: [
     {
@@ -148,7 +148,7 @@ const ru: Copy = {
       tag: "Логистика",
       title: "Места на декабрь и январь стоит бронировать сейчас",
       paras: [
-        `Места из Момбасы под загрузку в декабре и январе разбирают уже сейчас. Экспедиторы дают ${range(2600, 3100, "ru")} долларов за 20-футовый контейнер до Новороссийска и ${range(3200, 3900, "ru")} до Санкт-Петербурга — примерно на ${num(12, "ru")} % выше, чем те же слоты стоили в марте, и с сохранением надбавки за проход Красного моря.`,
+        `Места из Момбасы под загрузку в декабре и январе разбирают уже сейчас. Свободных слотов у экспедиторов заметно меньше, чем было в марте, а маршрут в обход Красного моря по-прежнему добавляет плечо к большинству ротаций. Условия перевозки подтверждаем в предложении под конкретное отгрузочное окно, а не переносим из прошлого.`,
         `Сам транзит держится в рамках: ${range(25, 32, "ru")} дня до Новороссийска и ${range(35, 45, "ru")} дней до Санкт-Петербурга. Разброс даёт перевалка: пропущенная стыковка в Джебель-Али или Салале добавляет ${range(4, 7, "ru")} дней, и постфактум этот риск уже не выкупить. Поэтому букинг мы ставим за ${range(3, 4, "ru")} недели до судна, а не за привычные две.`,
         `Практический дедлайн: лот нового урожая, законтрактованный до середины октября, уходит в декабре и проходит оформление в порту назначения в феврале. Позже — это уже покупка того, что осталось на складе к марту. В подтверждении мы указываем судно и ETA, а не просто месяц отгрузки, чтобы дата, под которую вы планируете производство, была фиксированной.`,
       ],
@@ -156,11 +156,11 @@ const ru: Copy = {
     {
       date: "2026-07-14",
       tag: "Аукцион",
-      title: "Сезон закрылся: AA держится, AB — лучшее соотношение цены и чашки",
+      title: "Сезон закрылся тонкими каталогами: берём AB",
       paras: [
-        `Во вторник Nairobi Coffee Exchange провёл последние торги сезона 2025/26: в каталоге было около ${num(8400, "ru")} мешков против ${range(14000, 18000, "ru")} мешков, которые уходили в феврале. Тонкий каталог в конце сезона обычно означает крепкие цены — так и вышло: AA из Ньери и Кириньяги ушёл по ${range(385, 455, "ru")} долларов за мешок ${num(50, "ru")} кг, AB с тех же моек — по ${range(305, 360, "ru")}.`,
-        `За сезон AA прибавил к прошлому примерно ${num(9, "ru")} %, AB — около ${num(6, "ru")} %. Разрыв между грейдами не сузился, а вырос: конкуренция шла за размер сита под моносорта, а не за баллы в чашке.`,
-        `Вывод на ближайшие месяцы: AB с той мойки, чей AA вам уже нравится, — самая выгодная позиция на доске. Тот же день сбора, та же ферментация, те же сушильные столы: минус ${range(1, 2, "ru")} балла в чашке и минус треть в цене. Там, где важнее профиль, а не размер зерна, мы предпочтём поставить AB, а разницу пустить на фрахт и отдых партии.`,
+        `Во вторник Nairobi Coffee Exchange провёл последние торги сезона 2025/26: в каталоге было около ${num(8400, "ru")} мешков против ${range(14000, 18000, "ru")} мешков, которые уходили в феврале. Каталоги конца сезона тонкие и разобранные: AA из Ньери и Кириньяги, который всё же вышел на торги, ушёл быстро — в основном к покупателям, у которых уже есть отношения с мойкой.`,
+        `Весь сезон конкуренция шла за размер сита под моносорта, а не за баллы в чашке. AB с тех же моек уходил спокойнее и меньшими партиями — это история про спрос, а не про качество.`,
+        `Вывод на ближайшие месяцы: AB с той мойки, чей AA вам уже нравится, — та позиция, которую взяли бы мы. Тот же день сбора, та же ферментация, те же сушильные столы: минус ${range(1, 2, "ru")} балла в чашке и то же поведение в обжарке. Там, где важнее профиль, а не размер зерна, спрашивайте AB — оба грейда с одной мойки котируем по запросу.`,
       ],
     },
     {
@@ -188,9 +188,9 @@ const ru: Copy = {
       tag: "Аукцион",
       title: "Февральские торги: борьба идёт за верхние сита",
       paras: [
-        `Вчерашние торги собрали ${num(16200, "ru")} мешков — один из крупнейших каталогов сезона — и разошлись почти полностью. AA с моек Центральной Кении уходил по ${range(400, 470, "ru")} долларов за мешок ${num(50, "ru")} кг, AB из тех же партий — по ${range(300, 350, "ru")}, PB торговался с дисконтом ${range(5, 8, "ru")} % к AB.`,
-        `Причин две. Мировая арабика остаётся исторически дорогой, поэтому покупатели, работающие на дифференциалах, менее чувствительны к цене, чем обычно. И основной урожай, который в декабре мы оценивали в ${range(50000, 53000, "ru")} т, вышел ближе к нижней границе — около ${num(50800, "ru")} т чистого кофе.`,
-        `Тем, кто ещё не закрыл кенийскую позицию на этот год: дешевле до промежуточного урожая не станет, а промежуточный урожай серьёзную программу не закроет. Закрывайте подтверждённую потребность сейчас и не трогайте спекулятивные объёмы.`,
+        `Вчерашние торги собрали ${num(16200, "ru")} мешков — один из крупнейших каталогов сезона — и разошлись почти полностью. AA с моек Центральной Кении ушёл первым, AB из тех же партий — следом, а PB нашёл покупателей ближе к концу торгов: весь сезон борьба идёт за верхние сита.`,
+        `Причин две. Мировое предложение арабики остаётся дефицитным, поэтому покупатели закрывают потребность раньше обычного. И основной урожай, который в декабре мы оценивали в ${range(50000, 53000, "ru")} т, вышел ближе к нижней границе — около ${num(50800, "ru")} т чистого кофе.`,
+        `Тем, кто ещё не закрыл кенийскую позицию на этот год: свободного кофе до промежуточного урожая больше не станет, а промежуточный урожай серьёзную программу не закроет. Закрывайте подтверждённую потребность сейчас и не трогайте спекулятивные объёмы.`,
       ],
     },
     {
@@ -206,12 +206,12 @@ const ru: Copy = {
   ],
 
   ctaEyebrow: "Прежде чем действовать",
-  ctaTitle: "Спросите цифры, которые стоят за заметкой",
+  ctaTitle: "Спросите, что стоит за заметкой",
   ctaLede:
-    "За каждой цифрой выше стоит конкретный лот, торги или букинг, в которых мы участвовали. Если какая-то из них важна для вашего решения, покажем первоисточник: аукционный лист, каппинг-форму или ставку экспедитора.",
+    "За каждой цифрой выше стоит конкретный лот, торги или букинг, в которых мы участвовали. Если какая-то из них важна для вашего решения, покажем первоисточник: аукционный лист, каппинг-форму или подтверждение букинга.",
   disclaimerLabel: "Ориентировочно, не торговая рекомендация.",
   disclaimerText:
-    "Это наши собственные наблюдения — с моек, с аукционных торгов и от букинг-отдела наших экспедиторов. Цены, объёмы и сроки указаны ориентировочно, меняются от недели к неделе и не являются офертой, котировкой или торговой рекомендацией. Твёрдую цену на конкретный грейд и отгрузочное окно мы даём отдельным предложением.",
+    "Это наши собственные наблюдения — с моек, с аукционных торгов и от букинг-отдела наших экспедиторов. Объёмы и сроки указаны ориентировочно, меняются от недели к неделе и не являются офертой, котировкой или торговой рекомендацией. Твёрдую цену на конкретный грейд и отгрузочное окно мы даём отдельным предложением.",
   cta: "Запросить актуальное предложение",
 };
 
